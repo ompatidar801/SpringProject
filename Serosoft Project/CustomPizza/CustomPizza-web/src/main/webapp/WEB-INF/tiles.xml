@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+         
+<tiles-definitions>
+
+  <definition name="baseTemplate" id="baseTemplate" template="/WEB-INF/layout/baseLayout.jsp">
+    <put-attribute name="title" type="string" value="${title}" />
+    <put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />
+    <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+    <put-attribute name="body" value="${body}" />
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition>
+  
+  <definition name="home" id="home" extends="baseTemplate">
+  	<put-attribute name="title" type="string" value="Home Page" />
+    <put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+  </definition>
+  
+  <definition name="buyPage" id="buyPage" extends="baseTemplate">
+  	<put-attribute name="title" type="string" value="BuyScreen" />
+    <put-attribute name="body" value="/WEB-INF/jsp/buyPage.jsp" />
+  </definition>
+  
+  <definition name="italian" id="italian" extends="baseTemplate">
+  	<put-attribute name="title" type="string" value="italian" />
+    <put-attribute name="body" value="/WEB-INF/jsp/italianPizza.jsp" />
+  </definition>
+  
+  <definition name="indian" id="indian" extends="baseTemplate">
+  	<put-attribute name="title" type="string" value="indian" />
+    <put-attribute name="body" value="/WEB-INF/jsp/indianPizza.jsp" />
+  </definition>
+  
+  <definition name="orders" id="orders" extends="baseTemplate">
+  	<put-attribute name="title" type="string" value="orders" />
+    <put-attribute name="body" value="/WEB-INF/jsp/order.jsp" />
+  </definition>
+  
+</tiles-definitions>
